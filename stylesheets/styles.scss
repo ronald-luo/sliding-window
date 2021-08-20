@@ -1,0 +1,40 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.window-container {
+  align-self: center;
+  margin: 0 auto 0 auto;
+  max-width: 80vw;
+  height: 35vh;
+  display: flex;
+}
+
+.window {
+  width: 100px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  img {
+    display: block;
+    object-fit: cover;
+  }
+}
+
+.active {
+  animation-name: active;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+
+  @keyframes active {
+    100% {
+      width: 100%;
+    }
+  }
+}
